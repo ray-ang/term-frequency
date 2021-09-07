@@ -1,5 +1,5 @@
-# Term Frequency Threshold (TFT) - Term Collections
-Term Frequency Threshold (TFT) - Term Collections Algorithm
+# Term Frequency Threshold (TF-T) - Term Collections
+Term Frequency Threshold (TF-T) - Term Collections Algorithm
 
 ### Features
 <ol>
