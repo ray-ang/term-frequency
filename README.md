@@ -4,7 +4,7 @@ Term Frequency Threshold (TFT) - Term Collections Algorithm
 ### Features
 <ol>
   <li>Text preprocessing</li>
-  <li>Collections of terms as topics and subtopics<li>
+  <li>Collections of terms as topics and subtopics</li>
   <li>Analyze a term, document or message using the term collections</li>
   <li>Sum of normalized term frequencies (TF) per term collection</li>
   <li>TF threshold for signal detection</li>
