@@ -50,10 +50,13 @@ function tf_total($input, $topic_terms, $threshold) {
 	if (! is_integer($threshold) || $threshold < 0) return '$threshold parameter should be a positive integer.';
 
 	$input_tokens = preproc($input); // preprocess input
+	ksort($input_tokens);
+
 	$term_tokens = array();
 	foreach ($topic_terms as $key => $value) { // preprocess topic terms
 		$term_tokens[$key] = preproc($value);
 	}
+	ksort($term_tokens);
 
 	$num_tokens = count($input_tokens);
 	$threshold = $threshold / $num_tokens; // normalized threshold
