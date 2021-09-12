@@ -60,18 +60,18 @@ function tf_total($input, $topic_terms, $threshold) {
 
 	$tf_array = array();
 	foreach ($term_tokens as $key => $value) {
-		$tf_t = 0;
+		$tf_n = 0;
 		foreach ($value as $term) {
 			$tf_raw = 0;
 			if (in_array($term, $input_tokens)) { // raw TF
 				$tf_raw = array_count_values($input_tokens)[$term];
 			}
 
-			$tf_t += $tf_raw / $num_tokens; // Total normalized TF
+			$tf_n += $tf_raw / $num_tokens; // Total normalized TF
 		}
 
-		if ($tf_t >= $threshold) { // signal detection
-			$tf_array[$key] = $tf_t; // recommended topics
+		if ($tf_n >= $threshold) { // signal detection
+			$tf_array[$key] = $tf_n; // recommended topics
 		}
 	}
 
