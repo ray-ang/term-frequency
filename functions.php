@@ -73,7 +73,14 @@ function tf_total($input, $topic_terms, $threshold) {
 			$tf_n += $tf_raw / $num_tokens; // Total normalized TF
 		}
 
-		if ($tf_n >= $threshold) { // signal detection
+		$input_count = 0;
+		foreach ($distinct_tokens as $input) { // count distinct input in term document
+			if (in_array($input, $value)) {
+				$input_count += 1;
+			}
+		}
+
+		if ( ($input_count/$num_distinct_tokens) >= $threshold ) { // signal detection
 			$tf_array[$key] = $tf_n; // recommended topics
 		}
 	}
