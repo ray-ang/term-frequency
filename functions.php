@@ -56,7 +56,10 @@ function tf_total($input, $topic_terms, $threshold) {
 	}
 
 	$num_tokens = count($input_tokens);
-	$threshold = $threshold / $num_tokens; // normalized threshold
+	$distinct_tokens = array_unique($input_tokens);
+	$num_distinct_tokens = count($distinct_tokens);
+	
+	$threshold = $threshold / $num_distinct_tokens; // normalized threshold
 
 	$tf_array = array();
 	foreach ($term_tokens as $key => $value) {
