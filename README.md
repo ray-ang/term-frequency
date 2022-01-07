@@ -1,14 +1,12 @@
-# Term Frequency Threshold (TF-T)
-Term Frequency using term documents with Threshold (TF-T)
+# Total Normalized Term Frequency - TF(t)
+Total term frequency with normalization TF(t) using term document and concept dictionaries
 
 ### Features
 <ol>
-  <li>Text preprocessing</li>
   <li>Query document or message (d<sub>0</sub>)</li>
-  <li>Term documents (d<sub>1</sub>, d<sub>2</sub>, ..., d<sub>n</sub>)</li>
-  <li>Analyze a query document (d<sub>0</sub>) using the term documents (d<sub>1</sub>, d<sub>2</sub>, ..., d<sub>n</sub>) as document corpus</li>
-  <li>Sum of normalized term frequencies (TF) per document</li>
-  <li>TF threshold for signal detection based on the normalized count of distinct input term present in term document</li>
+  <li>Term document composed of concept dictionaries (d<sub>1</sub>, d<sub>2</sub>, ..., d<sub>n</sub>)</li>
+  <li>Analyze a query document (d<sub>0</sub>) using the concept dictionaries (d<sub>1</sub>, d<sub>2</sub>, ..., d<sub>n</sub>) as term document</li>
+  <li>Sum of normalized term frequencies TF(t) per concept dictionary</li>
   <li>Suitable if with no access to a large document corpus</li>
 </ol>
 
