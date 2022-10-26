@@ -12,14 +12,16 @@
 function tf_total($input, $doc) {
 	if (! is_string($input)) return '$input parameter should be a string.';
 	if (! is_array($doc)) return '$doc parameter should be an array.';
-	$input = strtolower($input);
 
+	$input = trim(strtolower($input));
 	$doc1 = array();
+	
 	foreach ($doc as $key => $val) {
 		$count = 0;
 		foreach ($val as $row) {
+			$row = strtolower($row);
 			$freq = substr_count($input, $row); // raw frequency
-			$count += $freq / count( explode(' ', trim($input)) ); // total normalized frequency
+			$count += $freq / count( explode(' ', $input) ); // total normalized frequency
 		}
 		$doc1[$key] = $count;
 	}
